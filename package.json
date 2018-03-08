@@ -8,7 +8,7 @@
   },
   "node-red":{
     "nodes": {
-      "giphy-random": "giphy-random.js"
+      "giphy-random": "./nodes/giphy-random.js"
     }
   },
   "repository": {
