@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    RED.nodes.registerType('giphy-random',{
+        category: 'function',
+        color: '#aaaaaa',
+        defaults: {
+            name: {value:"giphy_random"},
+            apikey: {value:"",required: true},
+            tag: {value:""},
+            rating: {value:"g"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"giphy-random";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="giphy-random">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-apikey"><i class="icon-tag"></i> API key</label>
+        <input type="text" id="node-input-apikey" placeholder="API key">
+    </div>
+    <div class="form-row">
+        <label for="node-input-tag"><i class="icon-tag"></i> Search tag</label>
+        <input type="text" id="node-input-tag" placeholder="Search tag">
+    </div>
+    <div class="form-row">
+        <label for="node-input-rating"><i class="icon-tag"></i> Rating</label>
+
+        <select id="node-input-rating" placeholder="Rating">
+            <option value="y">y</option>
+            <option value="g">g</option>
+            <option value="pg">pg</option>
+            <option value="pg-13">pg-13</option>
+        </select>
+    </div>
+
+</script>
+
+<script type="text/x-red" data-help-name="giphy-random">
+    <p>A simple node that converts the message payloads into all lower-case characters</p>
+</script>
